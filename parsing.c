@@ -6,7 +6,7 @@
 /*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 09:32:21 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/21 12:17:07 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/21 17:24:47 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,13 @@ int	is_duplicate(t_stack *stack, int value)
 	}
 	return (0);
 }
+void	error_exit(t_stack **a)
+{
+	write(2, "Error\n", 6);
+	clear_stack(a);
+	exit(1);
+}
+
 void	verified(int argc, char **argv, t_stack **a)
 {
 	int		i;
@@ -51,7 +58,7 @@ void	verified(int argc, char **argv, t_stack **a)
 	{
 		split = ft_split(argv[i], ' ');
 		if (!split)
-			return ;
+			error_exit(a);
 		j = 0;
 		while (split[j])
 		{
@@ -62,7 +69,7 @@ void	verified(int argc, char **argv, t_stack **a)
 				error_exit(a);
 			if (is_duplicate(*a, (int)value))
 				error_exit(a);
-			ft_lstadd_back(a, stack_new((int)value));
+			add_node_back(a, create_node((int)value));
 			j++;
 		}
 		free_split(split);
