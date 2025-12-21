@@ -6,62 +6,64 @@
 /*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 10:08:19 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/20 15:23:56 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/21 11:42:42 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack *stack_new(int data)
+t_stack	*create_node(int data)
 {
-	t_stack *new_node;
+	t_stack	*new_node;
 
 	new_node = (t_stack *)malloc(sizeof(t_stack));
 	if (!new_node)
 		return (NULL);
 	new_node->data = data;
-	new_node->index = -1; 
+	new_node->index = -1;
 	new_node->next = NULL;
 	return (new_node);
 }
-void	ft_lstadd_back(t_stack **lst, t_stack *new)
-{
-	t_stack	*last;
 
-	if (!*lst)
+void	add_node_back(t_stack **head, t_stack *node)
+{
+	t_stack	*current;
+
+	if (!*head)
 	{
-		*lst = new;
+		*head = node;   // Head point to first node
 		return ;
 	}
-	last = *lst;
-	while (last->next)
-		last = last->next;
-	last->next = new;
+	current = *head; // first node in satck
+	while (current->next)
+		current = current->next;
+	current->next = node;
 }
-int	ft_lstsize(t_stack *lst)
-{
-	int	i;
 
-	i = 0;
-	while (lst)
+int	stack_size(t_stack *head)
+{
+	int	count;
+
+	count = 0;
+	while (head)
 	{
-		i++;
-		lst = lst->next;
+		count++;
+		head = head->next;
 	}
-	return (i);
+	return (count);
 }
 
-void	clear_stack(t_stack **stack)
+void	clear_stack(t_stack **head)
 {
-	t_stack	*tmp;
+	t_stack	*next_node;
 
-	if (!stack || !*stack)
+	if (!head || !*head)
 		return ;
-	while (*stack)
+	while (*head)
 	{
-		tmp = (*stack)->next;
-		free(*stack);
-		*stack = tmp;
+		next_node = (*head)->next;  //next node
+		free(*head);                // del current node
+		*head = next_node;          // move Head point to next node
 	}
 }
 
