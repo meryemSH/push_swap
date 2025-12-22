@@ -6,16 +6,16 @@
 /*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:49:30 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/21 12:03:09 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/22 10:00:42 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *nptr)
+long	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sign;
+	size_t	i;
+	size_t	sign;
 	long	res;
 
 	i = 0;
