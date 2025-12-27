@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/23 16:14:05 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/21 12:14:15 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/27 10:29:01 by meryemseghr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static size_t	ft_count_word(char *s, char c)
 {

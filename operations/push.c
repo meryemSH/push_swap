@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:01 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/26 10:45:04 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/27 10:29:31 by meryemseghr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	pa(t_stack **a, t_stack **b)
 {

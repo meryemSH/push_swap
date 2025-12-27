@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:09 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/26 10:50:06 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/27 10:29:38 by meryemseghr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	ra(t_stack **a)
 {

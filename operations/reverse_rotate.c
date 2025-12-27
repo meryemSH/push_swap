@@ -3,16 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:05 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/25 09:29:06 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/27 10:29:35 by meryemseghr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	rra(t_stack **a)
 {

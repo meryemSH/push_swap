@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   sort_2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:18 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/26 11:02:04 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/27 10:29:46 by meryemseghr      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sort_2(t_stack **a)
 {
