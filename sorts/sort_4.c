@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   sort_4.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 15:41:57 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/27 11:09:16 by meryemseghr      ###   ########.fr       */
+/*   Updated: 2025/12/27 17:02:51 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ int	get_position(t_stack *a, int index)
 	}
 	return (-1);
 }
+
 void	sort_4(t_stack **a, t_stack **b)
 {
 	int	pos;
@@ -40,7 +41,7 @@ void	sort_4(t_stack **a, t_stack **b)
 	}
 	else if (pos == 3)
 		rra(a);
-	pb(a, b);  // push smallest to B
-	sort_3(a); // sort remaining 3
-	pa(a, b);  // bring back smallest
+	pb(a, b);
+	sort_3(a);
+	pa(a, b);
 }

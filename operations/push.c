@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:01 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/27 10:29:31 by meryemseghr      ###   ########.fr       */
+/*   Updated: 2025/12/27 17:02:22 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ void	pa(t_stack **a, t_stack **b)
 	*a = tmp;
 	write(1, "pa\n", 3);
 }
+
 void	pb(t_stack **a, t_stack **b)
 {
 	t_stack	*tmp;

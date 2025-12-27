@@ -1,7 +1,7 @@
 NAME = push_swap
 
 CC = cc
-CFLAGS = -g -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 FILES = lib_utlis/ft_atoi.c \
 lib_utlis/ft_split.c \
@@ -19,6 +19,7 @@ sorts/sort_5.c \
 free_split.c \
 indexing.c \
 main.c \
+errors_free.c\
 parsing.c \
 push_swap.c \
 stack_utils.c

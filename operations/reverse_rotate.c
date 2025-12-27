@@ -3,13 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   reverse_rotate.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:05 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/27 10:29:35 by meryemseghr      ###   ########.fr       */
+/*   Updated: 2025/12/27 17:02:28 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "../push_swap.h"
 
@@ -32,6 +31,7 @@ void	rra(t_stack **a)
 	*a = last;
 	write(1, "rra\n", 4);
 }
+
 void	rrb(t_stack **b)
 {
 	t_stack	*prev;
@@ -51,6 +51,7 @@ void	rrb(t_stack **b)
 	*b = last;
 	write(1, "rrb\n", 4);
 }
+
 void	rrr(t_stack **a, t_stack **b)
 {
 	rra(a);

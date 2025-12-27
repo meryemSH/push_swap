@@ -6,7 +6,7 @@
 /*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/19 10:08:19 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/26 11:23:48 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/27 16:34:00 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,10 +31,10 @@ void	add_node_back(t_stack **head, t_stack *node)
 
 	if (!*head)
 	{
-		*head = node;   // Head point to first node
+		*head = node;
 		return ;
 	}
-	current = *head; // first node in satck
+	current = *head;
 	while (current->next)
 		current = current->next;
 	current->next = node;
@@ -61,9 +61,8 @@ void	clear_stack(t_stack **head)
 		return ;
 	while (*head)
 	{
-		next_node = (*head)->next;  //next node
-		free(*head);                // del current node
-		*head = next_node;          // move Head point to next node
+		next_node = (*head)->next;
+		free(*head);
+		*head = next_node;
 	}
 }
-

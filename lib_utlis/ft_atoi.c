@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 11:49:30 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/27 13:45:44 by meryemseghr      ###   ########.fr       */
+/*   Updated: 2025/12/27 16:28:41 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 long	ft_atol(const char *s)
 {
-	size_t i;
+	size_t	i;
 	long	res;
 	int		sign;
 
@@ -34,4 +34,3 @@ long	ft_atol(const char *s)
 	}
 	return (res * sign);
 }
-

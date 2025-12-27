@@ -6,10 +6,9 @@
 /*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/22 11:42:28 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/25 09:28:53 by mseghrou         ###   ########.fr       */
+/*   Updated: 2025/12/27 17:04:23 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -29,10 +28,11 @@ t_stack	*get_min(t_stack *stack)
 	}
 	return (min);
 }
+
 void	assign_index(t_stack *stack)
 {
-	t_stack	*min;
 	int		i;
+	t_stack	*min;
 
 	i = 0;
 	while (1)

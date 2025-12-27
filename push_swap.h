@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:40 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/27 14:51:23 by meryemseghr      ###   ########.fr       */
+/*   Updated: 2025/12/27 16:40:20 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
 typedef struct s_stack
 {
 	int				data;
@@ -37,6 +38,8 @@ int					is_number(char *s);
 t_stack				*get_min(t_stack *stack);
 void				assign_index(t_stack *stack);
 int					is_duplicate(t_stack *stack, int value);
+void				error_exit(t_stack **a);
+void				error_exit_split(t_stack **a, char **split);
 void				verified(int argc, char **argv, t_stack **a);
 void				sa(t_stack **a);
 void				sb(t_stack **b);
@@ -59,6 +62,5 @@ void				push_to_b(t_stack **a, t_stack **b, int chunk);
 void				push_to_a(t_stack **a, t_stack **b);
 void				sort_stack(t_stack **a, t_stack **b, int chunk);
 void				free_split(char **split);
-void				error_exit(t_stack **a);
 
 #endif

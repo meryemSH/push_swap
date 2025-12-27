@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   parsing.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/21 09:32:21 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/27 13:56:10 by meryemseghr      ###   ########.fr       */
+/*   Updated: 2025/12/27 16:41:37 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "push_swap.h"
 
 #include "push_swap.h"
 
@@ -45,36 +43,29 @@ int	is_duplicate(t_stack *stack, int value)
 	return (0);
 }
 
-void	error_exit(t_stack **a)
-{
-	write(2, "Error\n", 6);
-	clear_stack(a);
-	exit(1);
-}
-
-void	add_to_stack(t_stack **a, char *num_str)
+void	add_to_stack(t_stack **a, char *num_str, char **split)
 {
 	long	value;
 	t_stack	*node;
 
 	if (!is_number(num_str))
-		error_exit(a);
+		error_exit_split(a, split);
 	value = ft_atol(num_str);
 	if (value > 2147483647 || value < -2147483648)
-		error_exit(a);
+		error_exit_split(a, split);
 	if (is_duplicate(*a, (int)value))
-		error_exit(a);
+		error_exit_split(a, split);
 	node = create_node((int)value);
 	if (!node)
-		error_exit(a);
+		error_exit_split(a, split);
 	add_node_back(a, node);
 }
 
 void	verified(int argc, char **argv, t_stack **a)
 {
 	int		i;
-	char	**split;
 	int		j;
+	char	**split;
 
 	i = 1;
 	while (i < argc)
@@ -85,9 +76,9 @@ void	verified(int argc, char **argv, t_stack **a)
 		j = 0;
 		while (split[j])
 		{
-			if (!split[j][0]) 
-				error_exit(a);
-			add_to_stack(a, split[j]);
+			if (!split[j][0])
+				error_exit_split(a, split);
+			add_to_stack(a, split[j], split);
 			j++;
 		}
 		free_split(split);

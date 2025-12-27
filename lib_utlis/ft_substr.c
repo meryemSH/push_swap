@@ -1,9 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/27 16:29:30 by mseghrou          #+#    #+#             */
+/*   Updated: 2025/12/27 17:02:04 by mseghrou         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../push_swap.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t i;
-	char *new;
+	size_t	i;
+	char	*new;
 
 	i = 0;
 	if (!s)

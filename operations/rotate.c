@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   rotate.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: meryemseghrouchniidrissi <meryemseghrou    +#+  +:+       +#+        */
+/*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/25 09:29:09 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/27 10:29:38 by meryemseghr      ###   ########.fr       */
+/*   Updated: 2025/12/27 17:02:37 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ void	ra(t_stack **a)
 	first = *a;
 	*a = first->next;
 	first->next = NULL;
-
 	last = *a;
 	while (last->next)
 		last = last->next;
 	last->next = first;
 	write(1, "ra\n", 3);
 }
+
 void	rb(t_stack **b)
 {
 	t_stack	*first;
@@ -39,13 +39,13 @@ void	rb(t_stack **b)
 	first = *b;
 	*b = first->next;
 	first->next = NULL;
-
 	last = *b;
 	while (last->next)
 		last = last->next;
 	last->next = first;
 	write(1, "rb\n", 3);
 }
+
 void	rr(t_stack **a, t_stack **b)
 {
 	ra(a);
