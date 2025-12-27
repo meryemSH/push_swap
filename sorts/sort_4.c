@@ -1,21 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_2.c                                           :+:      :+:    :+:   */
+/*   sort_4.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mseghrou <mseghrou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/25 09:29:18 by mseghrou          #+#    #+#             */
-/*   Updated: 2025/12/26 11:02:04 by mseghrou         ###   ########.fr       */
+/*   Created: 2025/12/25 15:41:57 by mseghrou          #+#    #+#             */
+/*   Updated: 2025/12/26 11:38:26 by mseghrou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_2(t_stack **a)
+int	get_position(t_stack *a, int index)
 {
-	if (!a || !*a || !(*a)->next)
-		return ;
-	if ((*a)->data > (*a)->next->data)
-		sa(a);
+	int	i;
+
+	i = 0;
+	while (a)
+	{
+		if (a->index == index)
+			return (i);
+		a = a->next;
+		i++;
+	}
+	return (-1);
+}
+void	sort_4(t_stack **a, t_stack **b)
+{
+	int	pos;
+
+	pos = get_position(*a, 0);
+	if (pos == 1)
+		ra(a);
+	else if (pos == 2)
+	{
+		ra(a);
+		ra(a);
+	}
+	else if (pos == 3)
+		rra(a);
+	pb(a, b);
+	sort_3(a);
+	pa(a, b);
 }
